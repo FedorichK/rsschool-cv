@@ -26,24 +26,41 @@
     align-items:center;
     list-style: none; /* without markers*/
   }
-     
+
     .contacts-ul {
      list-style: circle; /*markers circles*/
     }
 
-    
+
     .nav-link {
       position: relative;
       padding: 0 12px; /*add space beetween links*/
       text-decoration: none;
-      color: #fff; 
+      color: #fff;
     }
-    
+
+    .nav-link.projects {
+      color: rgb(96, 119, 77);
+      font-weight: bold;
+    }
+
+    .nav-link.projects::after { /*animation*/
+      content: "";
+      position: absolute;
+      left: 12px;
+      bottom: -5px;
+      width: calc(100% - 24px);
+      height: 2px;
+      background-color: rgb(96, 119, 77);
+      opacity: 0;
+      transition: .5s;
+    }
+
     .contact-link {
       position: relative;
       padding: 0 12px; /*add space beetween links*/
       text-decoration: none;
-      color: rgb(96, 119, 77); 
+      color: rgb(96, 119, 77);
     }
     .nav-link::after { /*animation*/
       content: "";
@@ -56,7 +73,7 @@
       opacity: 0;
       transition: .5s;
     }
-    
+
     .nav-link:hover::after {
       opacity: 1;
       animation-name: slidein;
@@ -79,7 +96,7 @@
   font-weight: 300;
   letter-spacing: 8px;
  }
- 
+
 .section-subtitle {
   color: rgb(96, 119, 77);
   font-size: 28px;
@@ -109,7 +126,7 @@
   .section {
     width: 100%;
   }
-} 
+}
 
 .section-title {
   color: rgb(96, 119, 77);
@@ -129,7 +146,7 @@
 .section-profile-title { /*add space between photo and title*/
   padding: 0 40px;
   line-height: 40px;
-} 
+}
 
 .container { /*Limits the width of the container*/
   max-width: 1440px;
